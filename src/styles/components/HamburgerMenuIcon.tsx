@@ -7,6 +7,7 @@ export const hamburgerLines: CSSProperties = {
   display: "flex",
   flexDirection: "column",
   justifyContent: "space-between",
+  zIndex: 1000,
 };
 
 export const line: CSSProperties = {

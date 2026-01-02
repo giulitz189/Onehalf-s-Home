@@ -17,6 +17,17 @@ export const headerStyles: CSSProperties = {
     "linear-gradient(180deg, #0f52ba 0%, #0f52ba 75%, transparent 100%)",
 };
 
+export const menuStyles: CSSProperties = {
+  position: "absolute" as "absolute",
+  width: "100%",
+  overflowY: "auto" as "auto",
+  display: "flex",
+  flexDirection: "column" as "column",
+  backgroundColor: "rgba(89, 15, 186, 0.5)",
+  transition: "height 0.3s ease",
+  zIndex: 100,
+};
+
 export const contentStyles: CSSProperties = {
   flex: 1,
   height: "100%",

@@ -1,7 +1,12 @@
 import React, { FC, useState } from "react";
 import type { HeadFC, PageProps } from "gatsby";
 
-import { mainFrameStyles, headerStyles, contentStyles } from "../styles/pages";
+import {
+  mainFrameStyles,
+  headerStyles,
+  contentStyles,
+  menuStyles,
+} from "../styles/pages";
 import { HamburgerIcon } from "../components/HamburgerMenuIcon";
 
 const IndexPage: FC<PageProps> = () => {
@@ -15,6 +20,9 @@ const IndexPage: FC<PageProps> = () => {
           onClick={() => setMenuOpened(!menuOpened)}
         />
       </div>
+      <div
+        style={{ ...menuStyles, ...{ height: menuOpened ? "100%" : "0" } }}
+      ></div>
       <div style={contentStyles}></div>
     </div>
   );
