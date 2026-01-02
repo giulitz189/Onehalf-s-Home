@@ -1,29 +1,22 @@
 import React, { FC, useState } from "react";
 import type { HeadFC, PageProps } from "gatsby";
 
-import {
-  mainFrameStyles,
-  headerStyles,
-  contentStyles,
-  menuStyles,
-} from "../styles/pages";
-import { HamburgerIcon } from "../components/HamburgerMenuIcon";
+import "../styles/pages/index.scss";
+import { HamburgerIcon } from "../components/HamburgerMenuIcon/HamburgerMenuIcon";
 
 const IndexPage: FC<PageProps> = () => {
   const [menuOpened, setMenuOpened] = useState(false);
 
   return (
-    <div style={mainFrameStyles}>
-      <div style={headerStyles}>
+    <div className="main-frame">
+      <div className="header">
         <HamburgerIcon
           opened={menuOpened}
           onClick={() => setMenuOpened(!menuOpened)}
         />
       </div>
-      <div
-        style={{ ...menuStyles, ...{ height: menuOpened ? "100%" : "0" } }}
-      ></div>
-      <div style={contentStyles}></div>
+      <div className={`menu${menuOpened ? " opened" : ""}`}></div>
+      <div className="content"></div>
     </div>
   );
 };
