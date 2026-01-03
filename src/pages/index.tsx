@@ -3,6 +3,7 @@ import type { HeadFC, PageProps } from "gatsby";
 
 import "../styles/pages/index.scss";
 import { HamburgerIcon } from "../components/HamburgerMenuIcon/HamburgerMenuIcon";
+import { HeaderMenu } from "../components/HeaderMenu/HeaderMenu";
 
 const IndexPage: FC<PageProps> = () => {
   const [menuOpened, setMenuOpened] = useState(false);
@@ -15,7 +16,7 @@ const IndexPage: FC<PageProps> = () => {
           onClick={() => setMenuOpened(!menuOpened)}
         />
       </div>
-      <div className={`menu${menuOpened ? " opened" : ""}`}></div>
+      <HeaderMenu menuOpened={menuOpened} />
       <div className="content"></div>
     </div>
   );

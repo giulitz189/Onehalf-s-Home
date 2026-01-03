@@ -1,0 +1,50 @@
+.menu {
+  position: absolute;
+  width: 0;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  background: linear-gradient(
+    90deg,
+    rgb(89, 15, 186) 0%,
+    rgb(89, 15, 186) 90%,
+    transparent 100%
+  );
+  transition: width 0.3s ease;
+  z-index: 100;
+
+  ul {
+    width: 100%;
+    height: 100%;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    list-style-type: none;
+  }
+
+  &.opened {
+    width: 20%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    width: 100% !important;
+    height: 0;
+    background: rgb(89, 15, 186);
+    transition: height 0.3s ease;
+
+    ul {
+      padding: 0;
+      align-items: center;
+    }
+
+    &.opened {
+      height: 100%;
+    }
+  }
+}
