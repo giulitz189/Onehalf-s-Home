@@ -3,10 +3,10 @@ import type { HeadFC, PageProps } from "gatsby";
 
 import MainLayout from "../components/MainLayout/MainLayout";
 
-const IndexPage: FC<PageProps> = () => {
+const ContactPage: FC<PageProps> = () => {
   return <MainLayout></MainLayout>;
 };
 
-export default IndexPage;
+export default ContactPage;
 
-export const Head: HeadFC = () => <title>OneHalf's Home</title>;
+export const Head: HeadFC = () => <title>OneHalf's Home - Contact</title>;
